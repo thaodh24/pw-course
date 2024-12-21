@@ -22,10 +22,10 @@ const xpathInput = {
     newSettle: '//div[contains(text(),"Hover over me")]',
     enableFeature: '//span[@class="slider round"]',
 };
-const registerButton = '//button[contains(text(),"Register")]';
+const xpathRegisterButton = '//button[contains(text(),"Register")]';
 
 test("register scenario", async ({ page }) => {
-    await test.step('naivagate to Register page', async () => {
+    await test.step('navigate to Register page', async () => {
         await page.goto("https://material.playwrightvn.com/");
         await page.locator(`${xpathRegisterAccess}`).click();
         await page.locator(`${xpathRegisterHeader}`).isVisible();
@@ -50,7 +50,7 @@ test("register scenario", async ({ page }) => {
         await page.locator(`${xpathInput.enableFeature}`).setChecked(true);
     })
     await test.step('Clicks on Register button', async () => {
-        await page.locator(`${registerButton}`).click();
+        await page.locator(`${xpathRegisterButton}`).click();
     })
 })
 
