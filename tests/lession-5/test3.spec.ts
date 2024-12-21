@@ -21,8 +21,8 @@ test("Create todo tasks", async ({ page }) => {
     await test.step('Delete odd tasks', async () => {
         for (let i = 1; i <= 100; i += 2) {
             let xpathDeleteOddTaskButton = `//button[@id="todo-${i}-delete"]`;
+            page.on('dialog', dialog => dialog.accept());
             await page.locator(xpathDeleteOddTaskButton).click();
-            await page.on('dialog', dialog => dialog.accept());
         }
     })
 })
