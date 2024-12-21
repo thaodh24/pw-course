@@ -31,24 +31,25 @@ test("register scenario", async ({ page }) => {
         await page.locator(`${xpathRegisterHeader}`).isVisible();
     })
     await test.step('Input data on all fields', async () => {
-        await page.locator(`${xpathInput.username}`).fill('User01');
-        await page.locator(`${xpathInput.email}`).fill('User01@gmail.com');
-        await page.locator(`${xpathInput.gender.female}`).setChecked(true);
-        await page.locator(`${xpathInput.hobbies.reading}`).setChecked(true);
-        await page.locator(`${xpathInput.interest}`).selectOption({ value: "art" });
-        await page.locator(`${xpathInput.country}`).selectOption({ value: "canada" });
-        await page.locator(`${xpathInput.dateOfBirth}`).pressSequentially('24121997');
-        await page.locator(`${xpathInput.profilePicture}`).setInputFiles('tests/lession-5/Ảnh màn hình 2024-12-14 lúc 21.03.34.png');
-        await page.locator(`${xpathInput.biography}`).fill('biography Description');
-        await page.locator(`${xpathInput.rateUs}`).hover();
+        await page.locator(xpathInput.username).fill('User01');
+        await page.locator(xpathInput.email).fill('User01@gmail.com');
+        await page.locator(xpathInput.gender.female).setChecked(true);
+        await page.locator(xpathInput.hobbies.reading).setChecked(true);
+        await page.locator(xpathInput.interest).selectOption({ value: "art" });
+        await page.locator(xpathInput.country).selectOption({ value: "canada" });
+        await page.locator(xpathInput.dateOfBirth).pressSequentially('24121997');
+        await page.locator(xpathInput.profilePicture).setInputFiles('tests/lession-5/Ảnh màn hình 2024-12-14 lúc 21.03.34.png');
+        await page.locator(xpathInput.biography).fill('biography Description');
+        await page.locator(xpathInput.rateUs).hover();
         await page.mouse.up();
-        await page.locator(`${xpathInput.favColor}`).dblclick();
+        await page.locator(xpathInput.favColor).dblclick();
         await page.locator(`//span[@id="colorDisplay"]`).hover();
         await page.mouse.up();
-        await page.locator(`${xpathInput.newSettle}`).hover();
+        await page.locator(xpathInput.newSettle).hover();
         await page.locator(`//input[@id="newsletter"]`).isChecked();
-        await page.locator(`${xpathInput.enableFeature}`).setChecked(true);
+        await page.locator(xpathInput.enableFeature).setChecked(true);
     })
+
     await test.step('Clicks on Register button', async () => {
         await page.locator(`${xpathRegisterButton}`).click();
     })
