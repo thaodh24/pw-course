@@ -1,4 +1,5 @@
 import { test } from '@playwright/test';
+
 const xpathProductAccess = '//a[contains(text(),"Bài học 2: Product page")]';
 const xpathProductPageHeader = '//h1[contains(text(),"Simple E-commerce")]';
 const addSP1Button = '//button[@data-product-id = "1"]';

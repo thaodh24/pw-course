@@ -1,11 +1,12 @@
 import { test } from '@playwright/test';
+
 const xpathTodoPageAccess = '//a[contains(text(),"Bài học 3: Todo page")]';
 const xpathTodoPageHeader = '//h1[contains(text(),"To-Do List")]';
 const xpathInputTaskTextBox = '//input[@placeholder="Enter a new task"]';
 const xpathAddTaskButton = '//button[@id="add-task"]';
 
 test("Create todo tasks", async ({ page }) => {
-    await test.step('Naviagate to  Todo page', async () => {
+    await test.step('Naviagate to Todo page', async () => {
         await page.goto("https://material.playwrightvn.com/");
         await page.locator(xpathTodoPageAccess).click();
         await page.locator(xpathTodoPageHeader).isVisible();

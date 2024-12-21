@@ -30,6 +30,7 @@ test("register scenario", async ({ page }) => {
         await page.locator(xpathRegisterAccess).click();
         await page.locator(xpathRegisterHeader).isVisible();
     })
+    
     await test.step('Input data on all fields', async () => {
         await page.locator(xpathInput.username).fill('User01');
         await page.locator(xpathInput.email).fill('User01@gmail.com');
