@@ -27,8 +27,8 @@ const xpathRegisterButton = '//button[contains(text(),"Register")]';
 test("register scenario", async ({ page }) => {
     await test.step('navigate to Register page', async () => {
         await page.goto("https://material.playwrightvn.com/");
-        await page.locator(`${xpathRegisterAccess}`).click();
-        await page.locator(`${xpathRegisterHeader}`).isVisible();
+        await page.locator(xpathRegisterAccess).click();
+        await page.locator(xpathRegisterHeader).isVisible();
     })
     await test.step('Input data on all fields', async () => {
         await page.locator(xpathInput.username).fill('User01');
