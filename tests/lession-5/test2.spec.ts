@@ -5,8 +5,8 @@ const addSP1Button = '//button[@data-product-id = "1"]';
 const addSP2Button = '//button[@data-product-id = "2"]';
 const addSP3Button = '//button[@data-product-id = "3"]';
 
-test("Add product on the bassket", async ({ page }) => {
-    await test.step('Naviagate to Simple E-commerce page', async () => {
+test("Add product on the basket", async ({ page }) => {
+    await test.step('Naviagate to Product page', async () => {
         await page.goto("https://material.playwrightvn.com/");
         await page.locator(`${xpathProductAccess}`).click();
         await page.locator(`${xpathProductPageHeader}`).isVisible();
